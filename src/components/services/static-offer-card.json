@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Angebot 1",
+    "adress": "Strasse nummer 20",
+    "Datum": "01/01/2022",
+    "Zeitraum": "hallo@hallo.de",
+    "Anzahl-Flaschen": "18",
+    "Notiz": "Flaschen stehen im Treppenhaus"
+  },
+
+  {
+    "title": "Angebot 2",
+    "adress": "Strasse nummer 32",
+    "Datum": "02/10/2022",
+    "Zeitraum": "13:30-13:45",
+    "Anzahl-Flaschen": "18",
+    "Notiz": "Flaschen stehen im Treppenhaus"
+  }
+]
