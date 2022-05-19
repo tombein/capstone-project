@@ -1,9 +1,20 @@
-import CardDaten from '../src/components/Cards';
+import CardList from '../src/components/CardMap/CardList';
+import getCardMap from '../src/components/services/get-cardmap';
 
-export default function Home() {
+export function getStaticProps() {
+	const data = getCardMap();
+
+	return {
+		props: {
+			data,
+		},
+	};
+}
+
+export default function Home({ data }) {
 	return (
 		<main>
-			<CardDaten />
+			<CardList postdata={data} />
 		</main>
 	);
 }

@@ -1,10 +1,29 @@
 [
   {
+    "id": "1",
     "title": "Angebot 1",
-    "adress": "Blumenfeld 10",
-    "datum": "13-05-2022",
-    "zeitraum": "14:00-14:15",
+    "adress": "Blumenfeld 05",
+    "datum": "13-10-2022",
+    "zeitraum": "17:15-17:30",
     "AnzahlFlaschen": "18",
     "Notiz": "Flaschen stehen im Treppenhaus"
+  },
+  {
+    "id": "2",
+    "title": "Angebot 2",
+    "adress": "Blumenfeld 10",
+    "datum": "20-05-2022",
+    "zeitraum": "14:00-14:15",
+    "AnzahlFlaschen": "30",
+    "Notiz": "Einfach klingeln."
+  },
+  {
+    "id": "3",
+    "title": "Angebot 3",
+    "adress": "Blumenfeld 45",
+    "datum": "20-01-2022",
+    "zeitraum": "12:00-12:15",
+    "AnzahlFlaschen": "22",
+    "Notiz": "Draußen am Eingang"
   }
 ]
