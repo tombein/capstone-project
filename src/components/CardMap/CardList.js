@@ -1,12 +1,12 @@
-import CardDaten from '../Cards/Cards';
+import Cards from '../Cards/Cards';
 
-export default function CardMap({ postdata }) {
+export default function CardList({ postdata }) {
 	return (
 		<ul>
 			{postdata.map(data => {
 				return (
 					<li key={data.id}>
-						<CardDaten data={data} />
+						<Cards data={data} />
 					</li>
 				);
 			})}

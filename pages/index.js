@@ -1,4 +1,4 @@
-import CardMap from '../src/components/CardMap/Cardmap';
+import CardList from '../src/components/CardMap/CardList';
 import getCardMap from '../src/components/services/get-cardmap';
 
 export function getStaticProps() {
@@ -14,7 +14,7 @@ export function getStaticProps() {
 export default function Home({ data }) {
 	return (
 		<main>
-			<CardMap postdata={data} />
+			<CardList postdata={data} />
 		</main>
 	);
 }

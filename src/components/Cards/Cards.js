@@ -1,7 +1,7 @@
-import Offercard from '../styled-components/StyledOfferCard';
-import HeadlineOffercard from '../styled-components/styled-headline-offercard';
+import Offercard from '../styled-components/OfferCard.styled';
+import HeadlineOffercard from '../styled-components/headline.styled';
 
-export default function CardDaten({ data }) {
+export default function Cards({ data }) {
 	return (
 		<Offercard>
 			<HeadlineOffercard>{data.title}</HeadlineOffercard>
