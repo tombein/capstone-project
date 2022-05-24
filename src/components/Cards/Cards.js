@@ -1,15 +1,20 @@
-import Offercard from '../styled-components/OfferCard.styled';
-import HeadlineOffercard from '../styled-components/headline.styled';
+import Image from 'next/image';
+import StyledDiv from '../styled-components/StyledDiv';
+import HeadlineOffercard from '../styled-components/StyledHeadline';
 
-export default function Cards({ data }) {
+export default function Cards({ angebot }) {
+	console.log(angebot);
 	return (
-		<Offercard>
-			<HeadlineOffercard>{data.title}</HeadlineOffercard>
-			<p>{data.adress}</p>
-			<p>{data.datum}</p>
-			<p>{data.zeitraum}</p>
-			<p>{data.AnzahlFlaschen}</p>
-			<p>{data.Notiz}</p>
-		</Offercard>
+		<StyledDiv>
+			<HeadlineOffercard>{angebot.title}</HeadlineOffercard>
+			<p>{angebot.adress}</p>
+			<p>datum: {angebot.datum}</p>
+			<p>{angebot.zeitraum}</p>
+			<p>{angebot.AnzahlFlaschen}</p>
+			<p>{angebot.Notiz}</p>
+			{angebot.foto && angebot.foto.url && (
+				<Image src={angebot.foto.url} alt={angebot.title} width={100} height={100} />
+			)}
+		</StyledDiv>
 	);
 }

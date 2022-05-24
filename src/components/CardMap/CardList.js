@@ -1,12 +1,14 @@
 import Cards from '../Cards/Cards';
+import useStore from '../../hooks/useStore';
 
-export default function CardList({ postdata }) {
+export default function CardList() {
+	const cardlistzustand = useStore(state => state.cardlistzustand);
 	return (
 		<ul>
-			{postdata.map(data => {
+			{cardlistzustand.map(angebot => {
 				return (
-					<li key={data.id}>
-						<Cards data={data} />
+					<li key={angebot.id}>
+						<Cards angebot={angebot} />
 					</li>
 				);
 			})}
