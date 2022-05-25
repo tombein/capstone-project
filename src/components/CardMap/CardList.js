@@ -1,4 +1,4 @@
-import Cards from '../Cards/Cards';
+import Cards from '../Cards/Card';
 import useStore from '../../hooks/useStore';
 
 export default function CardList() {

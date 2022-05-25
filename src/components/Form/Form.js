@@ -29,9 +29,6 @@ export default function Form() {
 
 			const response = await fetch(url, {
 				method: 'POST',
-				/* headers: {
-					'Content-Type': 'multipart/form-data',
-				}, */
 				body: fileData,
 			});
 			setFotoValue(event.target.value);
