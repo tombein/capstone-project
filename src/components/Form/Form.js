@@ -3,6 +3,7 @@ import StyledForm from '../styled-components/StyledForm';
 import StyledInput from '../styled-components/StyledInput';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../styled-components/StyledButton';
+import { format } from 'date-fns';
 
 export default function Form() {
 	const [titleValue, setTitleValue] = useState('');
@@ -36,6 +37,10 @@ export default function Form() {
 			console.error(error.message);
 		}
 	};
+	const today = new Date();
+	const date = `${today.getFullYear()},${today.getMonth() + 1},${today.getDate()}`;
+	const dateFormat = format(new Date(date), 'yyyy/MM/dd');
+
 	return (
 		<section>
 			<StyledForm
@@ -89,6 +94,7 @@ export default function Form() {
 						placeholder="Datum"
 						name="zeitraum"
 						type="date"
+						min={dateFormat}
 						id="text-1542372332072"
 						value={dateValue}
 						onChange={event => {
