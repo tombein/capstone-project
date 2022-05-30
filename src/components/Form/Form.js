@@ -1,19 +1,18 @@
 import { useState } from 'react';
 import StyledForm from '../styled-components/StyledForm';
 import StyledInput from '../styled-components/StyledInput';
-import StyledLabel from '../styled-components/StyledLabel';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../styled-components/StyledButton';
 
 export default function Form() {
 	const [titleValue, setTitleValue] = useState('');
 	const [adressValue, setAdressValue] = useState('');
-	const [datumValue, setDatumValue] = useState('');
-	const [zeitraumValue, setZeitraumValue] = useState('');
-	const [anzahlflaschenValue, setAnzahlflaschenValue] = useState('');
-	const [notizValue, setNotizValue] = useState('');
+	const [dateValue, setDateValue] = useState('');
+	const [timeFrameValue, setTimeFrameValue] = useState('');
+	const [amountBottlesValue, setAmountBottlesValue] = useState('');
+	const [notesValue, setNotesValue] = useState('');
 	const addCard = useStore(state => state.addCard);
-	const [fotoValue, setFotoValue] = useState('');
+	const [photoValue, setPhotoValue] = useState('');
 	const [uploadedImage, setUploadedImage] = useState('');
 
 	const CLOUD = process.env.CLOUDINARY_CLOUD;
@@ -31,7 +30,7 @@ export default function Form() {
 				method: 'POST',
 				body: fileData,
 			});
-			setFotoValue(event.target.value);
+			setPhotoValue(event.target.value);
 			setUploadedImage(await response.json());
 		} catch (error) {
 			console.error(error.message);
@@ -45,93 +44,114 @@ export default function Form() {
 					addCard(
 						titleValue,
 						adressValue,
-						datumValue,
-						zeitraumValue,
-						anzahlflaschenValue,
-						notizValue,
+						dateValue,
+						timeFrameValue,
+						amountBottlesValue,
+						notesValue,
 						uploadedImage
 					);
 				}}
 			>
-				<StyledLabel htmlFor="Username">Angebot Title</StyledLabel>
-				<StyledInput
-					required
-					name="Username"
-					type="text"
-					id="Username"
-					value={titleValue}
-					onChange={event => {
-						setTitleValue(event.target.value);
-					}}
-				/>
+				<div>
+					<StyledInput
+						required
+						variant="inputfield"
+						placeholder="Angebot Title"
+						name="text-1542372332072"
+						type="text"
+						id="text-1542372332072"
+						value={titleValue}
+						onChange={event => {
+							setTitleValue(event.target.value);
+						}}
+					/>
+				</div>
 
-				<StyledLabel htmlFor="post">Adresse</StyledLabel>
-				<StyledInput
-					required
-					maxLength="700"
-					name="adresse"
-					type="adresse"
-					id="post"
-					value={adressValue}
-					onChange={event => {
-						setAdressValue(event.target.value);
-					}}
-				/>
+				<div>
+					<StyledInput
+						required
+						variant="inputfield"
+						placeholder="Adresse"
+						name="text-1542372332072"
+						type="adress"
+						id="text-1542372332072"
+						value={adressValue}
+						onChange={event => {
+							setAdressValue(event.target.value);
+						}}
+					/>
+				</div>
 
-				<StyledLabel htmlFor="Mail">Datum</StyledLabel>
-				<StyledInput
-					required
-					name="zeitraum"
-					type="date"
-					id="Mail"
-					value={datumValue}
-					onChange={event => {
-						setDatumValue(event.target.value);
-					}}
-				/>
+				<div>
+					<StyledInput
+						required
+						variant="inputfield"
+						placeholder="Datum"
+						name="zeitraum"
+						type="date"
+						id="text-1542372332072"
+						value={dateValue}
+						onChange={event => {
+							setDateValue(event.target.value);
+						}}
+					/>
+				</div>
 
-				<StyledLabel htmlFor="Mobile">Zeitraum</StyledLabel>
-				<StyledInput
-					required
-					name="Zeitraum"
-					type="time"
-					id="Mobile"
-					value={zeitraumValue}
-					onChange={event => {
-						setZeitraumValue(event.target.value);
-					}}
-				/>
-				<StyledLabel htmlFor="Anzahlflaschen">Anzahl-Flaschen</StyledLabel>
-				<StyledInput
-					required
-					name="mobile"
-					type="text"
-					id="Anzahl-Flaschen"
-					value={anzahlflaschenValue}
-					onChange={event => {
-						setAnzahlflaschenValue(event.target.value);
-					}}
-				/>
+				<div>
+					<StyledInput
+						required
+						variant="inputfield"
+						placeholder="Zeitraum"
+						name="Zeitraum"
+						type="time"
+						id="text-1542372332072"
+						value={timeFrameValue}
+						onChange={event => {
+							setTimeFrameValue(event.target.value);
+						}}
+					/>
+				</div>
 
-				<StyledLabel htmlFor="notiz">Notiz</StyledLabel>
-				<StyledInput
-					name="notiz"
-					type="text"
-					id="notiz"
-					value={notizValue}
-					onChange={event => {
-						setNotizValue(event.target.value);
-					}}
-				/>
+				<div>
+					<StyledInput
+						required
+						variant="inputfield"
+						placeholder="Anzahl-FLaschen"
+						name="mobile"
+						type="number"
+						id="Anzahl-Flaschen"
+						value={amountBottlesValue}
+						onChange={event => {
+							setAmountBottlesValue(event.target.value);
+						}}
+					/>
+				</div>
 
-				<StyledLabel htmlFor="foto">Foto</StyledLabel>
-				<StyledInput
-					name="foto"
-					type="file"
-					id="foto"
-					value={fotoValue}
-					onChange={uploadImage}
-				/>
+				<div>
+					<StyledInput
+						required
+						variant="inputfield"
+						placeholder="Notiz"
+						name="notiz"
+						type="text"
+						id="notiz"
+						value={notesValue}
+						onChange={event => {
+							setNotesValue(event.target.value);
+						}}
+					/>
+				</div>
+
+				<div>
+					<StyledInput
+						placeholder="Foto"
+						name="foto"
+						type="file"
+						id="foto"
+						value={photoValue}
+						onChange={uploadImage}
+					/>
+				</div>
 				<StyledButton type="submit">Inserieren</StyledButton>
 			</StyledForm>
 		</section>

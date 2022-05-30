@@ -5,13 +5,17 @@ export default function CardList() {
 	const cardlistzustand = useStore(state => state.cardlistzustand);
 	return (
 		<ul>
-			{cardlistzustand.map(angebot => {
+			{cardlistzustand.map(offer => {
+				const index = cardlistzustand.findIndex(
+					cardlistIndex => cardlistIndex.id === offer.id
+				);
 				return (
-					<li key={angebot.id}>
-						<Cards angebot={angebot} />
+					<li key={offer.id}>
+						<Cards angebot={offer} index={index} />
 					</li>
 				);
 			})}
+			;
 		</ul>
 	);
 }
