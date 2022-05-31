@@ -1,15 +1,21 @@
-import Cards from '../Cards/Cards';
+import Cards from '../Cards/Card';
+import useStore from '../../hooks/useStore';
 
-export default function CardList({ postdata }) {
+export default function CardList() {
+	const cardlistzustand = useStore(state => state.cardlistzustand);
 	return (
 		<ul>
-			{postdata.map(data => {
+			{cardlistzustand.map(offer => {
+				const index = cardlistzustand.findIndex(
+					cardlistIndex => cardlistIndex.id === offer.id
+				);
 				return (
-					<li key={data.id}>
-						<Cards data={data} />
+					<li key={offer.id}>
+						<Cards angebot={offer} index={index} />
 					</li>
 				);
 			})}
+			;
 		</ul>
 	);
 }
