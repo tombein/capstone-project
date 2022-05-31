@@ -38,8 +38,10 @@ export default function Form() {
 		}
 	};
 	const today = new Date();
-	const date = `${today.getFullYear()},${today.getMonth() + 1},${today.getDate()}`;
-	const dateFormat = format(new Date(date), 'yyyy/MM/dd');
+	const date = format(
+		new Date(today.getFullYear(), today.getMonth(), today.getDate()),
+		'yyyy-MM-dd'
+	);
 
 	return (
 		<section>
@@ -94,7 +96,7 @@ export default function Form() {
 						placeholder="Datum"
 						name="zeitraum"
 						type="date"
-						min={dateFormat}
+						min={date}
 						id="text-1542372332072"
 						value={dateValue}
 						onChange={event => {
@@ -125,6 +127,7 @@ export default function Form() {
 						placeholder="Anzahl-FLaschen"
 						name="mobile"
 						type="number"
+						min="0"
 						id="Anzahl-Flaschen"
 						value={amountBottlesValue}
 						onChange={event => {
