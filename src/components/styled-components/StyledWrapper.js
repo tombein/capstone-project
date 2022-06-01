@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-const StyledForm = styled.form`
+const Wrapper = styled.section`
+	width: 100vw;
+	hight: 100vh;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-left: 70px;
 `;
 
-export default StyledForm;
+export default Wrapper;

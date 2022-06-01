@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledCard = styled.section`
 	border: 3px solid black;
-	border-radius: 20px;
+	border-radius: 30px;
 	background-color: #40798c;
 	display: flex;
 	flex-direction: column;

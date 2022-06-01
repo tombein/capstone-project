@@ -4,6 +4,7 @@ import StyledInput from '../styled-components/StyledInput';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../styled-components/StyledButton';
 import { format } from 'date-fns';
+import Wrapper from '../styled-components/StyledWrapper';
 
 export default function Form() {
 	const [titleValue, setTitleValue] = useState('');
@@ -44,7 +45,7 @@ export default function Form() {
 	);
 
 	return (
-		<section>
+		<Wrapper>
 			<StyledForm
 				onSubmit={event => {
 					event.preventDefault();
@@ -163,6 +164,6 @@ export default function Form() {
 				</div>
 				<StyledButton type="submit">Inserieren</StyledButton>
 			</StyledForm>
-		</section>
+		</Wrapper>
 	);
 }
