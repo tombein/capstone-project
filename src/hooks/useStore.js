@@ -34,6 +34,14 @@ const useStore = create(
 			},
 		],
 
+		ondelete: index => {
+			set(
+				produce(draft => {
+					draft.cardlistzustand.splice(index, 1);
+				})
+			);
+		},
+
 		onreserved: index => {
 			set(
 				produce(draft => {

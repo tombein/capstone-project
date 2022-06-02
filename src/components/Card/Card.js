@@ -5,6 +5,7 @@ import StyledCard from '../styled-components/StyledCard';
 
 export default function Card({ angebot, index }) {
 	const onreserved = useStore(state => state.onreserved);
+	const ondelete = useStore(state => state.ondelete);
 	return (
 		<StyledCard>
 			<HeadlineOffercard>{angebot.title}</HeadlineOffercard>
@@ -26,6 +27,14 @@ export default function Card({ angebot, index }) {
 				}}
 			>
 				Reservieren
+			</button>
+			<button
+				type="button"
+				onClick={() => {
+					ondelete(index);
+				}}
+			>
+				Löschen
 			</button>
 		</StyledCard>
 	);
