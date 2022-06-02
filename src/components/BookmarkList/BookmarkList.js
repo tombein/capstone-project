@@ -14,7 +14,6 @@ export default function BookmarkList() {
 					return (
 						offer.reserved && (
 							<li key={offer.id}>
-								Hallo
 								<Card angebot={offer} index={index} />
 							</li>
 						)
