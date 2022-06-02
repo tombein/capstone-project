@@ -1,3 +1,9 @@
-export default function Postpage() {
-	return <p>Post</p>;
+import CardList from '../../src/components/CardMap/CardList';
+
+export default function Insertpage() {
+	return (
+		<main>
+			<CardList />
+		</main>
+	);
 }

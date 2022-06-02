@@ -1,3 +1,9 @@
-export default function Bookmarkpage() {
-	return <p>bookmark</p>;
+import BookmarkList from '../../src/components/BookmarkList/BookmarkList';
+
+export default function Insertpage() {
+	return (
+		<main>
+			<BookmarkList />
+		</main>
+	);
 }

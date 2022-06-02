@@ -1,3 +1,9 @@
+import Form from '../../src/components/Form/Form';
+
 export default function Insertpage() {
-	return <p>insert</p>;
+	return (
+		<main>
+			<Form />
+		</main>
+	);
 }
