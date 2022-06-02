@@ -125,7 +125,7 @@ export default function Form() {
 					<StyledInput
 						required
 						variant="inputfield"
-						placeholder="Wieviele Flaschen kannst du spenden?"
+						placeholder="Wieviele Flaschen möchten Sie spenden?"
 						name="mobile"
 						type="number"
 						min="0"
