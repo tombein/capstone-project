@@ -14,7 +14,6 @@ export default function Home() {
 			<CardList />
 			<Form />
 			<BookmarkList />
-			<p>MOINMOIN</p>
 		</main>
 	);
 }
