@@ -1,26 +1,37 @@
 import Link from 'next/link';
 import StyledFooter from './styled-components/StyledFooter';
+import StyledSection from './styled-components/StyledSection';
 
 export default function Footer() {
 	return (
 		<StyledFooter>
-			<nav>
-				<li>
-					<Link passHref href="/cards">
-						<a>Cards</a>
+			<StyledSection variant="footer">
+				<article>
+					<Link passHref href="/">
+						<a>Home</a>
 					</Link>
-				</li>
-				<li>
-					<Link passHref href="/createCard">
-						<a>CardForm</a>
+				</article>
+				<article>
+					<Link passHref href="/posts">
+						<a>Posts</a>
 					</Link>
-				</li>
-				<li>
+				</article>
+				<article>
+					<Link passHref href="/insert">
+						<a>Insert</a>
+					</Link>
+				</article>
+				<article>
 					<Link passHref href="/bookmark">
-						<a>bookmark</a>
+						<a>Bookmark</a>
 					</Link>
-				</li>
-			</nav>
+				</article>
+				<article>
+					<Link passHref href="/map">
+						<a>Map</a>
+					</Link>
+				</article>
+			</StyledSection>
 		</StyledFooter>
 	);
 }
