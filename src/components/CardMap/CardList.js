@@ -1,4 +1,4 @@
-import Cards from '../Cards/Card';
+import Card from '../Card/Card';
 import useStore from '../../hooks/useStore';
 
 export default function CardList() {
@@ -11,7 +11,7 @@ export default function CardList() {
 				);
 				return (
 					<li key={offer.id}>
-						<Cards angebot={offer} index={index} />
+						<Card angebot={offer} index={index} />
 					</li>
 				);
 			})}
