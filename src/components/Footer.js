@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import StyledFooter from './styled-components/StyledFooter';
 import StyledSection from './styled-components/StyledSection';
+import MySVG from './SVG';
 
 export default function Footer() {
 	return (
@@ -8,27 +9,37 @@ export default function Footer() {
 			<StyledSection variant="footer">
 				<article>
 					<Link passHref href="/">
-						<a>Home</a>
+						<div>
+							<MySVG variant="home" size="4rem" color="black" />
+						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/posts">
-						<a>Posts</a>
+						<div>
+							<MySVG variant="posts" size="4rem" color="black" />
+						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/insert">
-						<a>Insert</a>
+						<div>
+							<MySVG variant="insert" size="4rem" color="black" />
+						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/bookmark">
-						<a>Bookmark</a>
+						<div>
+							<MySVG variant="bookmark" size="4rem" color="black" />
+						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/map">
-						<a>Map</a>
+						<div>
+							<MySVG variant="map" size="4rem" color="black" />
+						</div>
 					</Link>
 				</article>
 			</StyledSection>
