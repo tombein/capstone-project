@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
 	position: fixed;
 	width: 100vw;
 	height: 8rem;
+	z-index: 10;
 `;
 
 export default StyledHeader;

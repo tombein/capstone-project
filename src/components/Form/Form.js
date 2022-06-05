@@ -5,6 +5,7 @@ import useStore from '../../hooks/useStore';
 import StyledButton from '../styled-components/StyledButton';
 import { format } from 'date-fns';
 import Wrapper from '../styled-components/StyledWrapper';
+import StyledLabel from '../styled-components/StyledLabel';
 
 export default function Form() {
 	const [titleValue, setTitleValue] = useState('');
@@ -60,26 +61,25 @@ export default function Form() {
 					);
 				}}
 			>
+				<StyledLabel htmlFor="title">Angebot Title</StyledLabel>
 				<div>
 					<StyledInput
 						required
 						variant="inputfield"
-						placeholder="Angebot Title"
-						name="text-1542372332072"
+						name="title"
 						type="text"
-						id="text-1542372332072"
+						id="title"
 						value={titleValue}
 						onChange={event => {
 							setTitleValue(event.target.value);
 						}}
 					/>
 				</div>
-
+				<StyledLabel htmlFor="title">Adresse</StyledLabel>
 				<div>
 					<StyledInput
 						required
 						variant="inputfield"
-						placeholder="Adresse"
 						name="text-1542372332072"
 						type="adress"
 						id="text-1542372332072"
@@ -89,12 +89,11 @@ export default function Form() {
 						}}
 					/>
 				</div>
-
+				<StyledLabel htmlFor="title">Datum</StyledLabel>
 				<div>
 					<StyledInput
 						required
 						variant="inputfield"
-						placeholder="Datum"
 						name="zeitraum"
 						type="date"
 						min={date}
@@ -105,12 +104,11 @@ export default function Form() {
 						}}
 					/>
 				</div>
-
+				<StyledLabel htmlFor="title">Zeitraum</StyledLabel>
 				<div>
 					<StyledInput
 						required
 						variant="inputfield"
-						placeholder="Zeitraum"
 						name="Zeitraum"
 						type="time"
 						id="text-1542372332072"
@@ -120,12 +118,11 @@ export default function Form() {
 						}}
 					/>
 				</div>
-
+				<StyledLabel htmlFor="title">Wieviele Flaschen möchten Sie spenden?</StyledLabel>
 				<div>
 					<StyledInput
 						required
 						variant="inputfield"
-						placeholder="Wieviele Flaschen möchten Sie spenden?"
 						name="mobile"
 						type="number"
 						min="0"
@@ -136,12 +133,11 @@ export default function Form() {
 						}}
 					/>
 				</div>
-
+				<StyledLabel htmlFor="title">Notiz</StyledLabel>
 				<div>
 					<StyledInput
 						required
 						variant="inputfield"
-						placeholder="Notiz"
 						name="notiz"
 						type="text"
 						id="notiz"
@@ -151,10 +147,9 @@ export default function Form() {
 						}}
 					/>
 				</div>
-
+				<StyledLabel htmlFor="title">Foto Upload</StyledLabel>
 				<div>
 					<StyledInput
-						placeholder="Foto"
 						name="foto"
 						type="file"
 						id="foto"

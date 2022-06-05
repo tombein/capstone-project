@@ -6,11 +6,11 @@ const StyledInput = styled.input`
 		css`
 			display: flex;
 			justify-content: center;
-			width: 441px;
+			width: 44.1rem;
 			max-width: 80%;
-			height: 30px;
+			height: 4rem;
 			border: 0;
-			background-color: #1f363d;
+			background-color: var(--main-color);
 			border-bottom-left-radius: 41px;
 			border-bottom-right-radius: 41px;
 			border-top-left-radius: 41px;
