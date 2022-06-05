@@ -10,35 +10,35 @@ export default function Footer() {
 				<article>
 					<Link passHref href="/">
 						<div>
-							<MySVG variant="home" size="4rem" color="black" />
+							<MySVG variant="home" size="4rem" color="white" />
 						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/posts">
 						<div>
-							<MySVG variant="posts" size="4rem" color="black" />
+							<MySVG variant="posts" size="4rem" color="white" />
 						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/insert">
 						<div>
-							<MySVG variant="insert" size="4rem" color="black" />
+							<MySVG variant="insert" size="4rem" color="white" />
 						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/bookmark">
 						<div>
-							<MySVG variant="bookmark" size="4rem" color="black" />
+							<MySVG variant="bookmark" size="4rem" color="white" />
 						</div>
 					</Link>
 				</article>
 				<article>
 					<Link passHref href="/map">
 						<div>
-							<MySVG variant="map" size="4rem" color="black" />
+							<MySVG variant="map" size="4rem" color="white" />
 						</div>
 					</Link>
 				</article>

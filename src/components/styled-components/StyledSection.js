@@ -4,7 +4,7 @@ const StyledSection = styled.section`
 	${({ variant }) =>
 		variant === 'footer' &&
 		`
-	border: 5px solid red;
+
 	display: flex;
 	height: 8rem;
 	width: 100vw;

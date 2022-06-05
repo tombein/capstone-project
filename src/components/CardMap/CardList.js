@@ -1,10 +1,11 @@
 import Card from '../Card/Card';
 import useStore from '../../hooks/useStore';
+import StyledUl from '../styled-components/StyledUl';
 
 export default function CardList() {
 	const cardlistzustand = useStore(state => state.cardlistzustand);
 	return (
-		<ul>
+		<StyledUl>
 			{cardlistzustand.map(offer => {
 				const index = cardlistzustand.findIndex(
 					cardlistIndex => cardlistIndex.id === offer.id
@@ -16,6 +17,6 @@ export default function CardList() {
 				);
 			})}
 			;
-		</ul>
+		</StyledUl>
 	);
 }
