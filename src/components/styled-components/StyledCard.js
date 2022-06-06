@@ -12,6 +12,7 @@ const StyledCard = styled.section`
 	width: 35rem;
 	margin: 0 2rem 3rem 2rem;
 	box-shadow: 0 0 3rem rgba(0, 0, 0, 0.7);
+	color: #e5e5e5;
 `;
 
 export default StyledCard;

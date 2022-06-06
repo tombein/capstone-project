@@ -2,6 +2,9 @@ import Image from 'next/image';
 import StyledHeadline2 from '../styled-components/StyledHeadline2';
 import useStore from '../../hooks/useStore';
 import StyledCard from '../styled-components/StyledCard';
+import StyledDeleteButton from '../styled-components/StyledDeleteButton';
+import StyledUnreservedButton from '../styled-components/StyledUnreservedButton';
+import StyledReservedButton from '../styled-components/StyledReservedButton';
 
 export default function Card({ angebot, index }) {
 	const onreserved = useStore(state => state.onreserved);
@@ -21,32 +24,32 @@ export default function Card({ angebot, index }) {
 				<Image src={angebot.photo.url} alt={angebot.title} width={100} height={100} />
 			)}
 			{angebot.reserved ? (
-				<button
+				<StyledUnreservedButton
 					type="button"
 					onClick={() => {
 						onreserved(index);
 					}}
 				>
 					Reservierung aufheben
-				</button>
+				</StyledUnreservedButton>
 			) : (
-				<button
+				<StyledReservedButton
 					type="button"
 					onClick={() => {
 						onreserved(index);
 					}}
 				>
 					Reservieren
-				</button>
+				</StyledReservedButton>
 			)}
-			<button
+			<StyledDeleteButton
 				type="button"
 				onClick={() => {
 					ondelete(index);
 				}}
 			>
 				Löschen
-			</button>
+			</StyledDeleteButton>
 		</StyledCard>
 	);
 }
