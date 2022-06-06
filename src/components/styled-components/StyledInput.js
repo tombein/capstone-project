@@ -4,24 +4,19 @@ const StyledInput = styled.input`
 	${({ variant }) =>
 		variant === 'inputfield' &&
 		css`
-			display: flex;
-			justify-content: center;
-			width: 44.1rem;
-			max-width: 80%;
-			height: 4rem;
-			border: 0;
-			background-color: var(--main-color);
-			border-bottom-left-radius: 41px;
-			border-bottom-right-radius: 41px;
-			border-top-left-radius: 41px;
-			border-top-right-radius: 0;
-			box-shadow: 0 17px 40px 0 rgba(75, 128, 182, 0.07);
-			margin-bottom: 22px;
-			position: relative;
-			font-size: 17px;
-			color: #a7b4c1;
-			transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out,
-				box-shadow 0.1s ease-in-out;
+			border-radius: 15px;
+			margin: 0.5rem;
+			width: 30rem;
+			padding: 0.75rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+			border: white;
+			font-family: sans-serif;
+			font-size: 1.8em;
+			outline: none;
+			border: 1px solid #004ba3;
 		`}
 `;
 
