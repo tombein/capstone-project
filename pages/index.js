@@ -1,11 +1,12 @@
 import StyledLanding from '../src/components/styled-components/StyledLanding';
-import Image from 'next/image';
 
 export default function Home() {
 	return (
 		<main>
 			<StyledLanding>
-				<Image src="/logo.png" alt="logo" width={400} height={400} />
+				<video autoPlay width="600" height="500">
+					<source src="videologo.mp4" type="video/mp4" />
+				</video>
 			</StyledLanding>
 		</main>
 	);
