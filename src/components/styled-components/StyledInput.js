@@ -4,11 +4,11 @@ const StyledInput = styled.input`
 	${({ variant }) =>
 		variant === 'inputfield' &&
 		css`
-			border-radius: 15px;
+			border-radius: 12px;
 			margin: 0.5rem;
 			width: 30rem;
 			padding: 0.75rem;
-			padding-top: 1rem;
+			padding-top: 1.8rem;
 			padding-bottom: 1rem;
 			background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);

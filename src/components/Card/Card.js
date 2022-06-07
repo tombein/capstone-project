@@ -8,6 +8,8 @@ import MySVG from '../SVG';
 import StyledDiv from '../styled-components/Styleddiv';
 import Styledparagraph from '../styled-components/Styledparagraph';
 import Styledimage from '../styled-components/Styledimage';
+import Styledarticle from '../styled-components/Styledarticle';
+import StyledReservedButton2 from '../styled-components/StyledReservedButton2';
 
 export default function Card({ angebot, index }) {
 	const onreserved = useStore(state => state.onreserved);
@@ -30,13 +32,13 @@ export default function Card({ angebot, index }) {
 				/>
 			</div>
 			<StyledSection variant="cardinfo">
-				<article>
-					<p>{angebot.adress}</p>
-					<p>datum: {angebot.date}</p>
-					<p>{angebot.timeFrame}</p>
-					<p>{angebot.amountBottles}</p>
-					<p>{angebot.notes}</p>
-				</article>
+				<Styledarticle>
+					<p>Adresse: {angebot.adress}</p>
+					<p>Datum: {angebot.date}</p>
+					<p>Uhrzeit: {angebot.timeFrame}</p>
+					<p>Anzahl der Flaschen: {angebot.amountBottles}</p>
+					<p>Information: {angebot.notes}</p>
+				</Styledarticle>
 
 				{angebot.photo && angebot.photo.url && (
 					<Styledimage
@@ -62,14 +64,16 @@ export default function Card({ angebot, index }) {
 					Reservierung aufheben
 				</StyledUnreservedButton>
 			) : (
-				<StyledReservedButton
-					type="button"
-					onClick={() => {
-						onreserved(index);
-					}}
-				>
-					Reservieren
-				</StyledReservedButton>
+				<StyledReservedButton2>
+					<StyledReservedButton
+						type="button"
+						onClick={() => {
+							onreserved(index);
+						}}
+					>
+						Reservieren
+					</StyledReservedButton>
+				</StyledReservedButton2>
 			)}
 		</StyledCard>
 	);

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+/* import styled from 'styled-components';
 
 const StyledButton = styled.button`
 	border-radius: 2rem;
@@ -7,13 +7,13 @@ const StyledButton = styled.button`
 	width: 30rem;
 	padding: 0.75rem;
 	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-bottom: 5rem;
 	color: white;
 	background: none;
 	background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
 	&:hover {
-		color: black;
+		transform: scale(1.1);
 	}
 `;
 
-export default StyledButton;
+export default StyledButton; */
