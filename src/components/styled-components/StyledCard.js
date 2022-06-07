@@ -13,13 +13,13 @@ const StyledCard = styled.section`
 	);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 25rem;
-	width: 45rem;
+	height: 24rem;
+	width: 34rem;
+	padding: 2rem 2rem 2rem 2rem;
 	margin: 0 2rem 3rem 2rem;
 	box-shadow: 0 0 3rem rgba(0, 0, 0, 0.7);
 	color: #e5e5e5;
+	position: relative;
 `;
 
 export default StyledCard;

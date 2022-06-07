@@ -1,10 +1,13 @@
-import Image from 'next/image';
 import StyledHeadline2 from '../styled-components/StyledHeadline2';
 import useStore from '../../hooks/useStore';
 import StyledCard from '../styled-components/StyledCard';
-import StyledDeleteButton from '../styled-components/StyledDeleteButton';
 import StyledUnreservedButton from '../styled-components/StyledUnreservedButton';
 import StyledReservedButton from '../styled-components/StyledReservedButton';
+import StyledSection from '../styled-components/Styledsection';
+import MySVG from '../SVG';
+import StyledDiv from '../styled-components/Styleddiv';
+import Styledparagraph from '../styled-components/Styledparagraph';
+import Styledimage from '../styled-components/Styledimage';
 
 export default function Card({ angebot, index }) {
 	const onreserved = useStore(state => state.onreserved);
@@ -12,16 +15,42 @@ export default function Card({ angebot, index }) {
 	return (
 		<StyledCard>
 			<StyledHeadline2>{angebot.title}</StyledHeadline2>
-			<p>{angebot.adress}</p>
-			<p>datum: {angebot.date}</p>
-			<p>{angebot.timeFrame}</p>
-			<p>{angebot.amountBottles}</p>
-			<p>{angebot.notes}</p>
+			<div
+				onClick={() => {
+					ondelete(index);
+				}}
+			>
+				<MySVG
+					variant="delete"
+					size="3rem"
+					color="white"
+					position="absolute"
+					top="1rem"
+					right="1rem"
+				/>
+			</div>
+			<StyledSection variant="cardinfo">
+				<article>
+					<p>{angebot.adress}</p>
+					<p>datum: {angebot.date}</p>
+					<p>{angebot.timeFrame}</p>
+					<p>{angebot.amountBottles}</p>
+					<p>{angebot.notes}</p>
+				</article>
 
-			{angebot.reserved && <p>ist Reserviert</p>}
-
-			{angebot.photo && angebot.photo.url && (
-				<Image src={angebot.photo.url} alt={angebot.title} width={100} height={100} />
+				{angebot.photo && angebot.photo.url && (
+					<Styledimage
+						src={angebot.photo.url}
+						alt={angebot.title}
+						width={120}
+						height={120}
+					/>
+				)}
+			</StyledSection>
+			{angebot.reserved && (
+				<StyledDiv variant="reserved">
+					<Styledparagraph>Reserviert</Styledparagraph>
+				</StyledDiv>
 			)}
 			{angebot.reserved ? (
 				<StyledUnreservedButton
@@ -42,14 +71,6 @@ export default function Card({ angebot, index }) {
 					Reservieren
 				</StyledReservedButton>
 			)}
-			<StyledDeleteButton
-				type="button"
-				onClick={() => {
-					ondelete(index);
-				}}
-			>
-				Löschen
-			</StyledDeleteButton>
 		</StyledCard>
 	);
 }

@@ -11,6 +11,14 @@ const StyledSection = styled.section`
 	justify-content: space-around;
 	align-items: center;
     `}
+	${({ variant }) =>
+		variant === 'cardinfo' &&
+		`
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem 0 2rem 0;
+	
+    `}
 `;
 
 export default StyledSection;
