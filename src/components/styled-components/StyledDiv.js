@@ -19,7 +19,7 @@ outline: dotted red;
 position: absolute;
 top: 6rem;
 right: 5rem;
-background-color: grey;
+background: transparent;
 `}
 `;
 export default StyledDiv;

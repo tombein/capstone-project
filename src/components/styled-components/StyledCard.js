@@ -14,7 +14,7 @@ const StyledCard = styled.section`
 	display: flex;
 	flex-direction: column;
 	height: 24rem;
-	width: 35rem;
+	width: 33rem;
 	padding: 2rem 2rem 2rem 2rem;
 	margin: 0 2rem 3rem 2rem;
 	box-shadow: 0 0 3rem rgba(0, 0, 0, 0.7);

@@ -15,7 +15,7 @@ const StyledInput = styled.input`
 			border: white;
 			font-family: sans-serif;
 			font-size: 1.8em;
-			outline: none;
+			_outline: none;
 			border: 1px solid #004ba3;
 		`}
 `;

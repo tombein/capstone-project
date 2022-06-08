@@ -1,7 +1,6 @@
 import StyledHeadline2 from '../styled-components/StyledHeadline2';
 import useStore from '../../hooks/useStore';
 import StyledCard from '../styled-components/StyledCard';
-import StyledUnreservedButton from '../styled-components/StyledUnreservedButton';
 import StyledReservedButton from '../styled-components/StyledReservedButton';
 import StyledSection from '../styled-components/Styledsection';
 import MySVG from '../SVG';
@@ -9,13 +8,16 @@ import StyledDiv from '../styled-components/Styleddiv';
 import Styledparagraph from '../styled-components/Styledparagraph';
 import Styledimage from '../styled-components/Styledimage';
 import Styledarticle from '../styled-components/Styledarticle';
-import StyledReservedButton2 from '../styled-components/StyledReservedButton2';
 
 export default function Card({ angebot, index }) {
 	const onreserved = useStore(state => state.onreserved);
 	const ondelete = useStore(state => state.ondelete);
 	return (
-		<StyledCard>
+		<StyledCard
+			style={{
+				background: angebot.reserved && 'grey',
+			}}
+		>
 			<StyledHeadline2>{angebot.title}</StyledHeadline2>
 			<div
 				onClick={() => {
@@ -55,25 +57,23 @@ export default function Card({ angebot, index }) {
 				</StyledDiv>
 			)}
 			{angebot.reserved ? (
-				<StyledUnreservedButton
+				<StyledReservedButton
 					type="button"
 					onClick={() => {
 						onreserved(index);
 					}}
 				>
 					Reservierung aufheben
-				</StyledUnreservedButton>
+				</StyledReservedButton>
 			) : (
-				<StyledReservedButton2>
-					<StyledReservedButton
-						type="button"
-						onClick={() => {
-							onreserved(index);
-						}}
-					>
-						Reservieren
-					</StyledReservedButton>
-				</StyledReservedButton2>
+				<StyledReservedButton
+					type="button"
+					onClick={() => {
+						onreserved(index);
+					}}
+				>
+					Reservieren
+				</StyledReservedButton>
 			)}
 		</StyledCard>
 	);

@@ -15,7 +15,6 @@ export default function Form() {
 	const [amountBottlesValue, setAmountBottlesValue] = useState('');
 	const [notesValue, setNotesValue] = useState('');
 	const addCard = useStore(state => state.addCard);
-	const [photoValue, setPhotoValue] = useState('');
 	const [uploadedImage, setUploadedImage] = useState('');
 
 	const CLOUD = process.env.CLOUDINARY_CLOUD;
@@ -33,7 +32,6 @@ export default function Form() {
 				method: 'POST',
 				body: fileData,
 			});
-			setPhotoValue(event.target.value);
 			setUploadedImage(await response.json());
 		} catch (error) {
 			console.error(error.message);
@@ -149,13 +147,7 @@ export default function Form() {
 				</div>
 				<StyledLabel htmlFor="title">Foto Upload</StyledLabel>
 				<div>
-					<StyledInput
-						name="foto"
-						type="file"
-						id="foto"
-						value={photoValue}
-						onChange={uploadImage}
-					/>
+					<StyledInput name="foto" type="file" id="foto" onChange={uploadImage} />
 				</div>
 				<StyledButton type="submit">Inserieren</StyledButton>
 			</StyledForm>
